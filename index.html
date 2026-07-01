@@ -5,6 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/gamebook/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>游戏书</title>
+    <style>
+      .config-import,
+      .admin-link {
+        opacity: 0.4 !important;
+        pointer-events: none !important;
+        cursor: not-allowed !important;
+      }
+    </style>
+    <script>
+      if (window.location.hash === '#admin') {
+        window.location.replace(window.location.pathname + window.location.search)
+      }
+    </script>
     <script type="module" crossorigin src="/gamebook/assets/index-NyuH78aK.js"></script>
     <link rel="stylesheet" crossorigin href="/gamebook/assets/index-Db5SGvQ9.css">
   </head>

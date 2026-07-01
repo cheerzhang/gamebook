@@ -1,0 +1,789 @@
+{
+  "version": 1,
+  "game": {
+    "id": "lastTrain",
+    "startNode": "start",
+    "name": {
+      "zh": "最后一班列车",
+      "en": "The Last Train",
+      "nl": "De laatste trein"
+    },
+    "description": {
+      "zh": "穿越深夜末班车，揭开车厢里隐藏的秘密。",
+      "en": "Travel through the last train of the night and uncover the secrets hidden inside.",
+      "nl": "Reis mee met de laatste nachttrein en ontrafel de geheimen in de coupés."
+    },
+    "nodes": {
+      "start": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第一页",
+            "text": "你登上一辆夜晚的列车。\n\n列车广播：\n“预计到站：16小时后。”\n\n刚坐下。\n你发现座位下面。\n有一本黑色的小册子。\n\n封面写着：\n“不要翻开最后一页。”",
+            "image": ""
+          },
+          "en": {
+            "title": "Page One",
+            "text": "You board a train late at night.\n\nThe announcement says:\n“Estimated arrival: in 16 hours.”\n\nYou have barely sat down when you notice a small black booklet under your seat.\n\nIts cover reads:\n“Do not open the last page.”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina één",
+            "text": "Je stapt laat op de avond in een trein.\n\nDe omroep zegt:\n„Verwachte aankomst: over 16 uur.”\n\nJe zit nog maar net als je onder je stoel een klein zwart boekje ziet.\n\nOp de kaft staat:\n„Open de laatste pagina niet.”",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page2",
+            "label": {
+              "zh": "A: 打开书",
+              "en": "A: Open the book",
+              "nl": "A: Open het boek"
+            }
+          },
+          {
+            "next": "page12",
+            "label": {
+              "zh": "B: 把书交给乘务员",
+              "en": "B: Give the book to the conductor",
+              "nl": "B: Geef het boek aan de conducteur"
+            }
+          }
+        ]
+      },
+      "carriage": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "车厢里的低语",
+            "text": "你坐在靠窗的位置，列车开始行驶。对面座位上的陌生人抬眼看你，嘴角含笑，却没有开口。",
+            "image": "一名气质神秘的陌生人，昏黄灯光下目光深邃。"
+          },
+          "en": {
+            "title": "Whispers in the Carriage",
+            "text": "You sit by the window as the train starts moving. The stranger opposite looks up at you with a faint smile, but says nothing.",
+            "image": "A mysterious stranger with deep-set eyes beneath the dim yellow light."
+          },
+          "nl": {
+            "title": "Gefluister in de coupé",
+            "text": "Je zit bij het raam wanneer de trein vertrekt. De vreemdeling tegenover je kijkt glimlachend op, maar zegt niets.",
+            "image": "Een mysterieuze vreemdeling met een diepe blik in het gedempte gele licht."
+          }
+        },
+        "actions": [
+          {
+            "next": "talk",
+            "label": {
+              "zh": "与他交谈",
+              "en": "Talk to him",
+              "nl": "Praat met hem"
+            }
+          },
+          {
+            "next": "sleep",
+            "label": {
+              "zh": "装作睡觉",
+              "en": "Pretend to sleep",
+              "nl": "Doe alsof je slaapt"
+            }
+          }
+        ]
+      },
+      "leave": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "选择离开",
+            "text": "你转身离开车站，夜风吹过，你的脚步越来越孤单。突然远处传来车轮声，末班车消失在黑暗里。",
+            "image": "空荡的站台，只剩下霓虹与冷风。"
+          },
+          "en": {
+            "title": "Choosing to Leave",
+            "text": "You turn away from the station. The night wind blows and your footsteps grow lonelier. In the distance, wheels suddenly rumble as the last train vanishes into the dark.",
+            "image": "An empty platform with nothing but neon light and cold wind."
+          },
+          "nl": {
+            "title": "Vertrekken",
+            "text": "Je keert het station de rug toe. De nachtwind waait en je voetstappen klinken steeds eenzamer. Dan hoor je in de verte wielen en verdwijnt de laatste trein in het donker.",
+            "image": "Een leeg perron met alleen neonlicht en koude wind."
+          }
+        },
+        "actions": [
+          {
+            "next": "carriage",
+            "label": {
+              "zh": "后悔回头",
+              "en": "Turn back",
+              "nl": "Ga terug"
+            }
+          },
+          {
+            "next": "endNight",
+            "label": {
+              "zh": "继续前行",
+              "en": "Keep walking",
+              "nl": "Loop verder"
+            }
+          }
+        ]
+      },
+      "talk": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "真相的片段",
+            "text": "陌生人低语：“不要相信窗外的影子，真正的危险在你的身后。”他递给你一张纸条，上面写着一串坐标。",
+            "image": "手中的纸条在灯光下闪烁，文字隐约可见。"
+          },
+          "en": {
+            "title": "A Fragment of Truth",
+            "text": "The stranger whispers, “Do not trust the shadows outside. The real danger is behind you.” He hands you a note bearing a string of coordinates.",
+            "image": "The note shimmers beneath the light, its writing barely visible."
+          },
+          "nl": {
+            "title": "Een stukje van de waarheid",
+            "text": "De vreemdeling fluistert: „Vertrouw de schaduwen buiten niet. Het echte gevaar is achter je.” Hij geeft je een briefje met coördinaten.",
+            "image": "Het briefje glinstert in het licht; de tekst is nauwelijks zichtbaar."
+          }
+        },
+        "actions": [
+          {
+            "next": "note",
+            "label": {
+              "zh": "查看纸条",
+              "en": "Read the note",
+              "nl": "Lees het briefje"
+            }
+          },
+          {
+            "next": "sleep",
+            "label": {
+              "zh": "忽视提醒",
+              "en": "Ignore the warning",
+              "nl": "Negeer de waarschuwing"
+            }
+          }
+        ]
+      },
+      "sleep": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "梦魇与轨道",
+            "text": "你假装睡着，列车的摇晃让你感到恍惚。车厢突然一震，窗外一片黑暗，仿佛有人在观察你。",
+            "image": "你闭着眼睛，却感觉有人从背后靠近。"
+          },
+          "en": {
+            "title": "Nightmares and Rails",
+            "text": "You pretend to sleep, lulled by the swaying train. The carriage suddenly jolts. Beyond the window is pure darkness, as though someone is watching you.",
+            "image": "Your eyes are closed, but you feel someone approaching from behind."
+          },
+          "nl": {
+            "title": "Nachtmerries en rails",
+            "text": "Je doet alsof je slaapt en raakt versuft door het schommelen. De coupé schokt plotseling. Buiten is alles donker, alsof iemand je bekijkt.",
+            "image": "Met gesloten ogen voel je iemand van achteren naderen."
+          }
+        },
+        "actions": [
+          {
+            "next": "find",
+            "label": {
+              "zh": "猛然睁眼",
+              "en": "Open your eyes",
+              "nl": "Open je ogen"
+            }
+          },
+          {
+            "next": "endNight",
+            "label": {
+              "zh": "继续沉睡",
+              "en": "Keep sleeping",
+              "nl": "Blijf slapen"
+            }
+          }
+        ]
+      },
+      "note": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "隐藏的线索",
+            "text": "纸条上的坐标指向城市边缘的一座废弃工厂。你心跳加速，意识到这列车比你想象的更加危险。",
+            "image": "泛黄纸条上的字迹歪斜，像是被刻意隐藏。"
+          },
+          "en": {
+            "title": "A Hidden Clue",
+            "text": "The coordinates point to an abandoned factory at the edge of the city. Your heart races as you realise this train is more dangerous than you thought.",
+            "image": "Crooked writing covers the yellowed note, as if someone tried to conceal it."
+          },
+          "nl": {
+            "title": "Een verborgen aanwijzing",
+            "text": "De coördinaten wijzen naar een verlaten fabriek aan de rand van de stad. Je hart bonst: deze trein is gevaarlijker dan je dacht.",
+            "image": "Scheve letters staan op het vergeelde briefje, alsof iemand ze wilde verbergen."
+          }
+        },
+        "actions": [
+          {
+            "next": "find",
+            "label": {
+              "zh": "继续前进",
+              "en": "Press on",
+              "nl": "Ga verder"
+            }
+          },
+          {
+            "next": "leave",
+            "label": {
+              "zh": "下车逃离",
+              "en": "Get off and escape",
+              "nl": "Stap uit en vlucht"
+            }
+          }
+        ]
+      },
+      "page2": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第二页",
+            "text": "欢迎回来。\n\n列车灯灭了一秒。\n再亮起时。\n对面多了一个老人。\n\n他笑着说：「你终于来了？」",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Two",
+            "text": "Welcome back.\n\nThe lights go out for one second.\nWhen they return, an old man is sitting opposite you.\n\nHe smiles. “You finally came?”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina twee",
+            "text": "Welkom terug.\n\nHet licht gaat één seconde uit. Wanneer het weer aangaat, zit er een oude man tegenover je.\n\nHij glimlacht. „Daar ben je eindelijk?”",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page3",
+            "label": {
+              "zh": "A: 回答： 你是谁？",
+              "en": "A: Ask: Who are you?",
+              "nl": "A: Vraag: Wie bent u?"
+            }
+          },
+          {
+            "next": "page5",
+            "label": {
+              "zh": "B: 保持沉默",
+              "en": "B: Remain silent",
+              "nl": "B: Blijf stil"
+            }
+          }
+        ]
+      },
+      "page3": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第三页",
+            "text": "老人说：\n“我已经等你很多年。”\n\n他拿出一枚硬币。\n放到你手里。\n“如果你相信我。现在就下车。”\n\n窗外。\n列车正在穿越一片浓雾。\n\n广播：\n“本次列车不停靠任何车站。”",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Three",
+            "text": "The old man says:\n“I have waited for you for many years.”\n\nHe takes out a coin and places it in your hand.\n“If you trust me, get off now.”\n\nOutside, the train passes through thick fog.\n\nAnnouncement:\n“This train will not stop at any station.”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina drie",
+            "text": "De oude man zegt:\n„Ik wacht al jaren op je.”\n\nHij legt een munt in je hand.\n„Als je me vertrouwt, stap dan nu uit.”\n\nDe trein rijdt door dichte mist.\n\nOmroep:\n„Deze trein stopt op geen enkel station.”",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page7",
+            "label": {
+              "zh": "A: 相信老人。",
+              "en": "A: Trust the old man",
+              "nl": "A: Vertrouw de oude man"
+            }
+          },
+          {
+            "next": "page4",
+            "label": {
+              "zh": "B: 不相信。",
+              "en": "B: Do not trust him",
+              "nl": "B: Vertrouw hem niet"
+            }
+          }
+        ]
+      },
+      "page4": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第四页",
+            "text": "老人叹气。\n“那就太迟了。”\n\n他说完。\n整个人消失。\n\n而你的座位上。\n多了一张纸。\n\n写着：\n“不要睡觉。”",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Four",
+            "text": "The old man sighs.\n“Then it is too late.”\n\nAs soon as he finishes speaking, he disappears.\n\nA sheet of paper now lies on your seat.\n\nIt reads:\n“Do not fall asleep.”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina vier",
+            "text": "De oude man zucht.\n„Dan is het te laat.”\n\nZodra hij is uitgesproken, verdwijnt hij.\n\nOp je stoel ligt nu een vel papier.\n\nEr staat:\n„Val niet in slaap.”",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page8",
+            "label": {
+              "zh": "A: 继续看纸。",
+              "en": "A: Keep reading",
+              "nl": "A: Lees verder"
+            }
+          },
+          {
+            "next": "page6",
+            "label": {
+              "zh": "B: 揉掉。",
+              "en": "B: Crumple it up",
+              "nl": "B: Verfrommel het"
+            }
+          }
+        ]
+      },
+      "page5": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第五页",
+            "text": "你没有回答。\n老人也没有再说话。\n\n一分钟后。\n他开始慢慢变透明。\n\n最后。\n整个车厢。\n只剩你一个人。\n\n广播：\n“欢迎来到终点站。”\n但是列车还在高速前进。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Five",
+            "text": "You do not answer. The old man says nothing more.\n\nA minute later, he slowly turns transparent.\n\nAt last, you are alone in the entire carriage.\n\nAnnouncement:\n“Welcome to the final stop.”\nBut the train is still moving at full speed.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina vijf",
+            "text": "Je antwoordt niet. De oude man zegt niets meer.\n\nEen minuut later wordt hij langzaam doorzichtig.\n\nUiteindelijk ben je alleen in de hele coupé.\n\nOmroep:\n„Welkom bij de eindhalte.”\nMaar de trein rijdt nog op volle snelheid.",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page9",
+            "label": {
+              "zh": "A: 查看窗外。",
+              "en": "A: Look outside",
+              "nl": "A: Kijk naar buiten"
+            }
+          },
+          {
+            "next": "page10",
+            "label": {
+              "zh": "B: 打开黑色小册子。",
+              "en": "B: Open the black booklet",
+              "nl": "B: Open het zwarte boekje"
+            }
+          }
+        ]
+      },
+      "page6": {
+        "type": "falseEnding",
+        "content": {
+          "zh": {
+            "title": "第六页",
+            "text": "你把纸揉掉。\n\n十分钟后。\n你睡着了。\n\n醒来时。\n你发现。\n自己坐在第1页。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Six",
+            "text": "You crumple up the paper.\n\nTen minutes later, you fall asleep.\n\nWhen you wake, you find yourself sitting on page one.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina zes",
+            "text": "Je verfrommelt het papier.\n\nTien minuten later val je in slaap.\n\nWanneer je wakker wordt, zit je weer op pagina één.",
+            "image": ""
+          }
+        },
+        "actions": []
+      },
+      "page7": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第七页",
+            "text": "你冲向车门。\n门居然开了。\n\n外面不是铁轨。\n而是一座月光下的旧车站。\n\n站牌：\n【终点：昨天。】",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Seven",
+            "text": "You rush to the door. It actually opens.\n\nOutside there are no tracks, but an old station bathed in moonlight.\n\nThe sign reads:\n【Destination: Yesterday】",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina zeven",
+            "text": "Je rent naar de deur. Hij gaat echt open.\n\nBuiten liggen geen rails, maar staat een oud station in het maanlicht.\n\nOp het bord staat:\n【Bestemming: gisteren】",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page11",
+            "label": {
+              "zh": "继续",
+              "en": "Continue",
+              "nl": "Verder"
+            }
+          }
+        ]
+      },
+      "page11": {
+        "type": "falseEnding",
+        "content": {
+          "zh": {
+            "title": "第十一页",
+            "text": "你终于知道。\n整辆列车。\n\n所有乘客。\n都是曾经的你。\n\n只是不同时间的你。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Eleven",
+            "text": "At last you understand.\n\nEvery passenger on the train is you—a version of you from a different point in time.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina elf",
+            "text": "Eindelijk begrijp je het.\n\nElke passagier in de trein ben jij—een versie van jou uit een ander moment.",
+            "image": ""
+          }
+        },
+        "actions": []
+      },
+      "page8": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第八页",
+            "text": "纸背面还有一句：\n“不要相信拿着硬币的人。”\n\n你低头。\n你的手里。\n正拿着那枚硬币。\n\n老人已经不见了。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Eight",
+            "text": "There is another sentence on the back:\n“Do not trust the person holding the coin.”\n\nYou look down. The coin is in your hand.\n\nThe old man is gone.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina acht",
+            "text": "Op de achterkant staat nog een zin:\n„Vertrouw degene met de munt niet.”\n\nJe kijkt omlaag. De munt ligt in je hand.\n\nDe oude man is verdwenen.",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page13",
+            "label": {
+              "zh": "继续",
+              "en": "Continue",
+              "nl": "Verder"
+            }
+          }
+        ]
+      },
+      "page13": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第十三页",
+            "text": "现在你必须决定。\n相信纸。\n\n还是相信老人。\n\n老人已经消失。\n纸不会说话。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Thirteen",
+            "text": "Now you must decide: trust the paper, or trust the old man.\n\nThe old man has disappeared. Paper cannot speak.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina dertien",
+            "text": "Nu moet je kiezen: vertrouw je het papier of de oude man?\n\nDe oude man is verdwenen. Papier kan niet praten.",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page15",
+            "label": {
+              "zh": "A: 相信纸。",
+              "en": "A: Trust the paper",
+              "nl": "A: Vertrouw het papier"
+            }
+          },
+          {
+            "next": "page7",
+            "label": {
+              "zh": "B: 相信老人。",
+              "en": "B: Trust the old man",
+              "nl": "B: Vertrouw de oude man"
+            }
+          }
+        ]
+      },
+      "page9": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第九页",
+            "text": "窗外。\n所有风景都是静止的。\n只有列车在移动。\n\n你忽然意识到：\n不是列车在前进。\n而是世界在倒退。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Nine",
+            "text": "Outside, every part of the landscape is still. Only the train is moving.\n\nThen you realise: the train is not moving forward. The world is moving backward.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina negen",
+            "text": "Buiten staat het hele landschap stil. Alleen de trein beweegt.\n\nDan besef je: de trein gaat niet vooruit. De wereld gaat achteruit.",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page11",
+            "label": {
+              "zh": "继续",
+              "en": "Continue",
+              "nl": "Verder"
+            }
+          }
+        ]
+      },
+      "page12": {
+        "type": "falseEnding",
+        "content": {
+          "zh": {
+            "title": "第十二页",
+            "text": "乘务员看到黑书。\n脸色瞬间惨白。\n\n他说：\n\"你怎么拿到了这个？\"\n\n然后。\n列车急刹。\n\n整节车厢。\n消失。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Twelve",
+            "text": "The conductor sees the black book and turns deathly pale.\n\n“How did you get that?”\n\nThen the train brakes sharply.\n\nThe entire carriage disappears.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina twaalf",
+            "text": "De conducteur ziet het zwarte boek en wordt lijkbleek.\n\n„Hoe kom je daaraan?”\n\nDan remt de trein abrupt.\n\nDe hele coupé verdwijnt.",
+            "image": ""
+          }
+        },
+        "actions": []
+      },
+      "page10": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第十页",
+            "text": "小黑册子的第二页。\n只有一句。\n\n“第16小时。\n你会想起一切。”",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Ten",
+            "text": "The second page of the black booklet contains only one sentence:\n\n“In the sixteenth hour, you will remember everything.”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina tien",
+            "text": "Op de tweede pagina van het zwarte boekje staat maar één zin:\n\n„In het zestiende uur zul je je alles herinneren.”",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page14",
+            "label": {
+              "zh": "继续",
+              "en": "Continue",
+              "nl": "Verder"
+            }
+          }
+        ]
+      },
+      "page14": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "第十四页",
+            "text": "你把硬币扔出窗外。\n整个列车开始震动。\n\n广播：\n\"循环已解除。\"\n\n列车第一次停下。",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Fourteen",
+            "text": "You throw the coin out of the window. The entire train begins to shake.\n\nAnnouncement:\n“The cycle has been broken.”\n\nFor the first time, the train stops.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina veertien",
+            "text": "Je gooit de munt uit het raam. De hele trein begint te schudden.\n\nOmroep:\n„De cyclus is doorbroken.”\n\nVoor het eerst stopt de trein.",
+            "image": ""
+          }
+        },
+        "actions": [
+          {
+            "next": "page16",
+            "label": {
+              "zh": "A: 打开纸。",
+              "en": "A: Open the paper",
+              "nl": "A: Open het papier"
+            }
+          },
+          {
+            "next": "page11",
+            "label": {
+              "zh": "B: 不打开。",
+              "en": "B: Do not open it",
+              "nl": "B: Open het niet"
+            }
+          }
+        ]
+      },
+      "page15": {
+        "type": "trueEnding",
+        "content": {
+          "zh": {
+            "title": "第十五页",
+            "text": "你开始想起。\n\n其实。\n这是你第38次坐这班列车。\n\n只是每一次。\n都会失忆。\n\n而最后一页。\n仍然封着。\n\n",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Fifteen",
+            "text": "You begin to remember.\n\nThis is actually the 38th time you have taken this train.\n\nEach time, you lose your memory.\n\nAnd the final page is still sealed.",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina vijftien",
+            "text": "Je begint het je te herinneren.\n\nDit is de 38e keer dat je deze trein neemt.\n\nElke keer verlies je je geheugen.\n\nEn de laatste pagina is nog steeds verzegeld.",
+            "image": ""
+          }
+        },
+        "actions": []
+      },
+      "page16": {
+        "type": "trueEnding",
+        "content": {
+          "zh": {
+            "title": "第十六页",
+            "text": "最后一页。\n只有一句。\n\n\"下一位读者，就是第一页的你。\"",
+            "image": ""
+          },
+          "en": {
+            "title": "Page Sixteen",
+            "text": "The final page contains only one sentence:\n\n“The next reader is you on page one.”",
+            "image": ""
+          },
+          "nl": {
+            "title": "Pagina zestien",
+            "text": "Op de laatste pagina staat maar één zin:\n\n„De volgende lezer ben jij op pagina één.”",
+            "image": ""
+          }
+        },
+        "actions": []
+      },
+      "find": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "真相的边缘",
+            "text": "你决定追寻线索。列车在隧道中穿行，前方闪过一个短暂的身影。你渐渐感觉这不是一场普通的列车旅程。",
+            "image": "隧道深处，黑影一闪而过。"
+          },
+          "en": {
+            "title": "On the Edge of Truth",
+            "text": "You follow the clue. As the train passes through a tunnel, a figure briefly flashes ahead. This is no ordinary train journey.",
+            "image": "A dark figure flickers deep inside the tunnel."
+          },
+          "nl": {
+            "title": "Op de rand van de waarheid",
+            "text": "Je volgt de aanwijzing. In een tunnel flitst er even een gestalte voor je. Dit is geen gewone treinreis.",
+            "image": "Diep in de tunnel flitst een donkere gestalte voorbij."
+          }
+        },
+        "actions": [
+          {
+            "next": "confront",
+            "label": {
+              "zh": "呼喊那个人",
+              "en": "Call out",
+              "nl": "Roep de persoon"
+            }
+          },
+          {
+            "next": "endNight",
+            "label": {
+              "zh": "保持安静",
+              "en": "Stay quiet",
+              "nl": "Blijf stil"
+            }
+          }
+        ]
+      },
+      "confront": {
+        "type": "page",
+        "content": {
+          "zh": {
+            "title": "对峙前夜",
+            "text": "你冲出车门，发现一个黑影消失在车流之后。你的冒险才刚刚开始。",
+            "image": "车门外的夜色与列车尾灯交织成红色长线。"
+          },
+          "en": {
+            "title": "Before the Confrontation",
+            "text": "You rush through the door and see a shadow vanish beyond the traffic. Your adventure has only just begun.",
+            "image": "The night and the train’s tail lights form long red streaks."
+          },
+          "nl": {
+            "title": "Voor de confrontatie",
+            "text": "Je stormt door de deur en ziet een schaduw achter het verkeer verdwijnen. Je avontuur is pas net begonnen.",
+            "image": "De nacht en de achterlichten vormen lange rode strepen."
+          }
+        },
+        "actions": [
+          {
+            "next": "endNight",
+            "label": {
+              "zh": "前往下一章",
+              "en": "Go to the next chapter",
+              "nl": "Naar het volgende hoofdstuk"
+            }
+          }
+        ]
+      },
+      "endNight": {
+        "type": "falseEnding",
+        "content": {
+          "zh": {
+            "title": "夜之终点",
+            "text": "列车驶入黎明时分，你的故事暂时落幕。明天，或许还有另一段秘密等待你。",
+            "image": "远方破晓，车轮继续前行。"
+          },
+          "en": {
+            "title": "The End of Night",
+            "text": "The train enters the dawn and your story pauses here. Tomorrow, another secret may be waiting.",
+            "image": "Dawn breaks in the distance as the wheels roll on."
+          },
+          "nl": {
+            "title": "Het einde van de nacht",
+            "text": "De trein rijdt de dageraad binnen en je verhaal pauzeert hier. Morgen wacht er misschien een nieuw geheim.",
+            "image": "In de verte breekt de dag aan terwijl de wielen doordraaien."
+          }
+        },
+        "actions": []
+      }
+    }
+  }
+}

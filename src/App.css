@@ -4,6 +4,49 @@
   margin: 0 auto;
 }
 
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.home-toolbar { justify-content: space-between; gap: 16px; }
+.config-tools { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.config-import, .admin-link { padding: 8px 12px; border-radius: 999px; background: rgba(255,255,255,.06); color: #cbd2ff; cursor: pointer; font-size: .9rem; text-decoration: none; }
+.config-import input { display: none; }
+.config-error { color: #ff9eaa; background: rgba(190,50,70,.12); padding: 12px; border-radius: 10px; margin-bottom: 14px; }
+
+.story-toolbar {
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.language-switcher {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px;
+}
+
+.language-switcher button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #b9c0e8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+  background: #6978e8;
+  color: #fff;
+}
+
 .hero-banner {
   background: linear-gradient(135deg, #1f2548 0%, #11131f 100%);
   border: 1px solid rgba(255,255,255,0.08);
@@ -87,14 +130,29 @@
   box-shadow: 0 20px 40px rgba(123, 80, 255, 0.2);
 }
 
+.play-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+
 .back-button {
-  margin-bottom: 18px;
+  margin-bottom: 0;
   background: transparent;
   border: 1px solid rgba(255,255,255,0.16);
   color: #fff;
   padding: 12px 18px;
   border-radius: 18px;
   width: fit-content;
+}
+
+@media (max-width: 560px) {
+  .app-shell { padding: 16px; }
+  .story-toolbar { align-items: flex-start; flex-direction: column-reverse; }
+  .language-switcher { align-self: flex-end; }
+  .home-toolbar { align-items: flex-end; flex-direction: column-reverse; }
+  .summary-card { padding: 22px; }
 }
 
 .story-card {
@@ -260,6 +318,18 @@
   color: #e0e5ff;
 }
 
+.ending-copy {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ending-copy p {
+  color: #d6d9ff;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
 .summary-content {
   margin-bottom: 28px;
 }
@@ -340,4 +410,3 @@
 .play-again-button:active {
   transform: translateY(-2px);
 }
-

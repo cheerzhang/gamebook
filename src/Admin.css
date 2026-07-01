@@ -1,0 +1,29 @@
+.admin-shell { max-width: 1440px; margin: 0 auto; padding: 28px; }
+.admin-header, .panel-title, .admin-actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.admin-header { align-items: flex-start; margin-bottom: 24px; }
+.admin-header h1 { font-size: 2rem; }
+.admin-message { color: #a0aeff; margin-top: 8px; }
+.admin-actions { flex-wrap: wrap; justify-content: flex-end; }
+.admin-actions a, .admin-button, .panel-title button { border: 0; border-radius: 10px; padding: 10px 14px; background: #6978e8; color: white; cursor: pointer; font: inherit; text-decoration: none; }
+.admin-button.secondary, .admin-actions a { background: rgba(255,255,255,.09); }
+.admin-button input { display: none; }
+.admin-panel { background: #11162c; border: 1px solid rgba(255,255,255,.1); border-radius: 18px; padding: 20px; }
+.game-settings { display: grid; gap: 14px; margin-bottom: 20px; }
+.locale-fields { display: grid; grid-template-columns: 100px 1fr 2fr; gap: 12px; align-items: end; }
+.admin-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 20px; align-items: start; }
+.node-list { display: grid; gap: 8px; position: sticky; top: 18px; max-height: calc(100vh - 36px); overflow: auto; }
+.node-list > button { text-align: left; padding: 11px; border: 1px solid transparent; border-radius: 10px; background: rgba(255,255,255,.04); color: white; cursor: pointer; }
+.node-list > button.selected { border-color: #6978e8; background: rgba(105,120,232,.2); }
+.node-list span, .node-list small { display: block; }
+.node-list small, .node-editor small { color: #8992bd; margin-top: 4px; }
+.node-editor { display: grid; gap: 18px; }
+.node-editor fieldset { border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }
+.node-editor legend { color: #aab5ff; padding: 0 8px; }
+.admin-shell label { display: grid; gap: 6px; color: #b7bfdf; font-size: .9rem; }
+.admin-shell input, .admin-shell select, .admin-shell textarea { width: 100%; border: 1px solid rgba(255,255,255,.13); border-radius: 9px; padding: 10px; background: #080c1c; color: white; font: inherit; }
+.admin-shell textarea { resize: vertical; }
+.route-editor { display: grid; gap: 12px; }
+.route-card { display: grid; grid-template-columns: repeat(4, 1fr) auto; gap: 10px; align-items: end; padding: 14px; background: rgba(255,255,255,.035); border-radius: 12px; }
+.danger { background: #703947 !important; }
+.danger:disabled { opacity: .35; cursor: not-allowed; }
+@media (max-width: 900px) { .admin-header, .admin-layout { display: grid; grid-template-columns: 1fr; } .node-list { position: static; max-height: 280px; } .locale-fields, .route-card { grid-template-columns: 1fr; } }

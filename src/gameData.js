@@ -1,6 +1,8 @@
 export const gameData = {
   lastTrain: {
     id: 'lastTrain',
+    // The game always starts here. Node ids and action targets are never shown to players.
+    startNode: 'start',
     name: '最后一班列车',
     description: '穿越深夜末班车，揭开车厢里隐藏的秘密。',
     nodes: {
@@ -95,12 +97,11 @@ export const gameData = {
         ],
       },
       page6: {
+        type: 'falseEnding',
         title: '第六页',
         text: '你把纸揉掉。\n\n十分钟后。\n你睡着了。\n\n醒来时。\n你发现。\n自己坐在第1页。',
         image: '',
-        actions: [
-          { label: '回到第一页', next: 'start' },
-        ],
+        actions: [],
       },
       page7: {
         title: '第七页',
@@ -111,12 +112,11 @@ export const gameData = {
         ],
       },
       page11: {
+        type: 'falseEnding',
         title: '第十一页',
         text: '你终于知道。\n整辆列车。\n\n所有乘客。\n都是曾经的你。\n\n只是不同时间的你。',
         image: '',
-        actions: [
-          { label: '回到第一页', next: 'start' },
-        ],
+        actions: [],
       },
       page8: {
         title: '第八页',
@@ -144,12 +144,11 @@ export const gameData = {
         ],
       },
       page12: {
+        type: 'falseEnding',
         title: '第十二页',
         text: '乘务员看到黑书。\n脸色瞬间惨白。\n\n他说：\n"你怎么拿到了这个？"\n\n然后。\n列车急刹。\n\n整节车厢。\n消失。',
         image: '',
-        actions: [
-          { label: '回到第一页', next: 'start' },
-        ],
+        actions: [],
       },
       page10: {
         title: '第十页',
@@ -169,22 +168,18 @@ export const gameData = {
         ],
       },
       page15: {
+        type: 'trueEnding',
         title: '第十五页',
         text: '你开始想起。\n\n其实。\n这是你第38次坐这班列车。\n\n只是每一次。\n都会失忆。\n\n而最后一页。\n仍然封着。\n\n',
         image: '',
-        actions: [
-          { label: '查看通关总结', next: 'gameEnd' },
-        ],
-        isEnding: true,
+        actions: [],
       },
       page16: {
+        type: 'trueEnding',
         title: '第十六页',
         text: '最后一页。\n只有一句。\n\n"下一位读者，就是第一页的你。"',
         image: '',
-        actions: [
-          { label: '回到第一页，继续寻找列车的秘密', next: 'gameEnd' },
-        ],
-        isEnding: true,
+        actions: [],
       },
       find: {
         title: '真相的边缘',
@@ -204,12 +199,11 @@ export const gameData = {
         ],
       },
       endNight: {
+        type: 'falseEnding',
         title: '夜之终点',
         text: '列车驶入黎明时分，你的故事暂时落幕。明天，或许还有另一段秘密等待你。',
         image: '远方破晓，车轮继续前行。',
-        actions: [
-          { label: '返回首页', next: 'home' },
-        ],
+        actions: [],
       },
     },
   },
